@@ -74,8 +74,8 @@ pipeline {
         failure {
             echo "❌ Pipeline FAILED: Check logs"
         }
-        cleanup {
-            cleanWs()
-        }
+        // cleanup {
+        //     cleanWs()
+        // }
     }
 }
