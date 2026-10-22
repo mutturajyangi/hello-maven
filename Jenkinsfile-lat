@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'DR.STRANGE'
+    }
 
     tools {
         maven 'Maven-3.9'
@@ -74,8 +76,8 @@ pipeline {
         failure {
             echo "❌ Pipeline FAILED: Check logs"
         }
-        // cleanup {
-        //     cleanWs()
-        // }
+        cleanup {
+            cleanWs()
+        }
     }
 }
